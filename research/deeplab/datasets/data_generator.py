@@ -86,7 +86,14 @@ _PASCAL_VOC_SEG_INFORMATION = DatasetDescriptor(
     num_classes=21,
     ignore_label=255,
 )
-
+_LIP_VOC_SEG_INFORMATION = DatasetDescriptor(
+    splits_to_sizes={
+        'train': 50,
+        'val': 10,
+    },
+    num_classes=2,
+    ignore_label=255,
+)
 _ADE20K_INFORMATION = DatasetDescriptor(
     splits_to_sizes={
         'train': 20210,  # num of samples in images/training
@@ -100,6 +107,7 @@ _DATASETS_INFORMATION = {
     'cityscapes': _CITYSCAPES_INFORMATION,
     'pascal_voc_seg': _PASCAL_VOC_SEG_INFORMATION,
     'ade20k': _ADE20K_INFORMATION,
+	'lip_voc_seg': _LIP_VOC_SEG_INFORMATION,
 }
 
 # Default file pattern of TFRecord of TensorFlow Example.

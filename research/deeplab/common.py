@@ -25,10 +25,10 @@ flags = tf.app.flags
 
 # Flags for input preprocessing.
 
-flags.DEFINE_integer('min_resize_value', None,
+flags.DEFINE_integer('min_resize_value', 513,
                      'Desired size of the smaller image side.')
 
-flags.DEFINE_integer('max_resize_value', None,
+flags.DEFINE_integer('max_resize_value', 513,
                      'Maximum allowed size of the larger image side.')
 
 flags.DEFINE_integer('resize_factor', None,
